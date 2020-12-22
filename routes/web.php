@@ -18,7 +18,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/products', function () {
-    $pasta = [
+    $pastas = [
         [
             "src" => "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-m.jpg",
             "src-h" => "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-h.jpg",
@@ -141,7 +141,28 @@ Route::get('/products', function () {
         ]
     ];
 
-    $data = ['pasta' => $pasta];
+    $data = ['pastas' => $pastas];
 
     return view('products', $data);
+});
+
+Route::get('/news', function () {
+    return view('news');
+});
+
+Route::get('/products/product', function () {
+    $product = [
+        "src" => "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-m.jpg",
+        "src-h" => "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-h.jpg",
+        "src-p" => "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-p.jpg",
+        "titolo" => "N.4 Spaghetto Quadrato Bucato",
+        "tipo" => "lunga",
+        "cottura" => "6 min",
+        "peso" => "500g",
+        "descrizione" => "È la vera rivelazione della gamma! Lo Spaghetto Quadrato Bucato n.4 fa pensare subito ad una pasta molto succulenta che ha lo stesso potenziale dello Spaghetto Quadrato (N.1 Spaghetto Quadrato). La sua consistenza soda si sprigiona in bocca con un’esplosione di emozioni, grazie agli spessori corposi, al colore elegantemente ambrato, alla texture delicatamente ruvida, cangiante e piacevolissima al tatto che trattiene il condimento sulla superficie. <br> Da provare per rivoluzionare le sorti del primo piatto sia a casa che al ristorante.Dedicato a chi in cucina ama sperimentare nuove forme del gusto, ma vuole stupire affidandosi ad una pasta che garantisce ottime performance in cottura, lo Spaghetto Quadrato Bucato n .4 è il formato perfetto che racchiude tutte caratteristiche uniche di Pasta La Molisana. <br> Da provare per quelli che… il Bucatino già mi piace, lo Spaghetto Quadrato Bucato n .4 sarà il paradiso della pasta!"
+    ];
+
+    $data = ['product' => $product];
+
+    return view('product', $data);
 });

@@ -9,7 +9,7 @@
     max-width: 992px;
     margin: 0 auto;
 
-    &::after {
+    &::after, .clearfix::after {
         content: '';
         display: table;
         clear: both;
@@ -18,4 +18,8 @@
 
 body > div {
     display: none;
+}
+
+main {
+    padding: 100px 0;
 }

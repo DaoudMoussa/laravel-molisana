@@ -19,8 +19,9 @@ header {
                     color: $mainTextColor;
                     text-decoration: none;
                     font-size: 18px;
+                    transition: background-color 0.5s;
 
-                    &.active {
+                    &.active, &:hover {
                         background-color: $mainColor;
                     }
                 }
