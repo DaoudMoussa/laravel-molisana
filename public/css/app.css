@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+}
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body > div {
+  display: none;
+}
+
+header {
+  text-align: center;
+}
+header .bottom-header .nav {
+  list-style-type: none;
+}
+header .bottom-header .nav li {
+  display: inline-block;
+}
+header .bottom-header .nav li a {
+  display: inline-block;
+  padding: 15px;
+  color: #0e203d;
+  text-decoration: none;
+  font-size: 18px;
+}
+header .bottom-header .nav li a.active {
+  background-color: #b3e5fc;
+}
+
+footer {
+  padding: 100px 0;
+  background-image: url("./../img/footer-montagne-bottom.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: #556e7a;
+  font-size: 12px;
+}
+footer .section {
+  float: left;
+  width: calc(100% / 3);
+}
+footer .section .info {
+  list-style-type: none;
+}
+footer .section .info img {
+  max-width: 70%;
+}
+footer .section ul:not(.info) {
+  list-style-type: none;
+}
+footer .section ul:not(.info) li {
+  margin: 5px 0;
+}
+footer .section ul:not(.info) li h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+footer .section ul:not(.info) li a {
+  color: #556e7a;
+  text-decoration: none;
+}
+footer .section ul:not(.info) li a:hover {
+  text-decoration: underline;
+}
